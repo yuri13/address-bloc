@@ -13,9 +13,6 @@ RSpec.describe AddressBook do
 
   describe "#nuke" do
     it "should delete all entries" do
-      book.add.entry("Jim Thome", "909.999.8899", "jt@aol.com")
-      book.add.entry("Jim Thome", "909.999.8899", "jt@aol.com")
-      book.add.entry("Jim Thome", "909.999.8899", "jt@aol.com")
 
       book.nuke
       expect(book.entries.size).to eq 0
