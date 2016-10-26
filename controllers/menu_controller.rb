@@ -14,7 +14,8 @@ class MenuController
     puts "2 - Create an entry"
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
-    puts "5 - Exit"
+    puts "5 - Nuke all entries"
+    puts "6 - Exit"
     print "Enter your selection: "
 
     # #3
@@ -38,6 +39,11 @@ class MenuController
         read_csv
         main_menu
       when 5
+        system "clear"
+        @address_book.nuke
+        puts "All entries have been nuked!"
+        main_menu
+      when 6
         puts "Good-bye!"
         # #Terminate the program using exit(0)
         exit(0)
